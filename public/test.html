@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<p>按F12查看console</p>
+<div id="result"></div>
+<script>
+    //普通get请求
+    $.ajax({
+        url: "/getForLearn",
+        type: "get"
+    }).done(function (result) {
+        console.log(" ");
+        console.log("get请求信息")
+        console.log(result);
+    })
+
+    var obj = {
+        age: 100,
+        like: ["learning", "game"],
+        name: "wang dong",
+        testtest: 123
+    };
+
+    //普通post请求
+    $.ajax({
+        url: "/postForLearnResByString",
+        type: "post",
+        data: JSON.stringify(obj),  //这里是发送的数据，转为字符串（原因是value有数组或者对象）
+        contentType: "application/json" //如果要发送数组，这里需要这么设置，并且上面发字符串
+    }).done(function (result) {
+        console.log(" ");
+        console.log("post发送信息，返回值是字符串");
+        console.log(result);
+    })
+
+    //post请求，返回的是对象
+    $.ajax({
+        url: "/postForLearnResByObject",
+        type: "post",
+        data: JSON.stringify(obj),  //这里是发送的数据，转为字符串（原因是value有数组或者对象）
+        contentType: "application/json" //如果要发送数组，这里需要这么设置，并且上面发字符串
+    }).done(function (result) {
+        console.log(" ");
+        console.log("post发送信息，返回值是对象，返回值是发送信息对象中，key的长度小于5的项");
+        console.log(result);
+    })
+</script>
+</body>
+</html>
