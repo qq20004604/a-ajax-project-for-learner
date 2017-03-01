@@ -1,24 +1,18 @@
 ﻿#step
 
-1、 下载nodejs，安装之（官网或者在我的[百度盘分享链接下载](http://pan.baidu.com/s/1i4S0ZY1)）
+1、 需要有nodejs，没有则下载nodejs，安装之（官网或者在我的[百度盘分享链接下载](http://pan.baidu.com/s/1i4S0ZY1)）
 
-2、 找个空文件夹，运行以下指令（或者在从上面的分享链接里下载run.bat放到该文件夹下运行，提示输入时输入y）；
+2、 在本文件夹通过cmd运行以下命令安装相关的依赖。
 
 ```
-npm install -g express
-npm install -g express-generator
-express
+npm install
 ```
 
-3、 此时，文件夹里应该有5个文件夹，1个package.json，一个app.js
-
-4、 当前目录下通过cmd输入 ```npm start``` 尝试启动服务器，如果没有报错，则说明正常，例如最下面显示的是以下的命令：
+3、 当前目录下通过cmd输入 ```npm start``` 尝试启动服务器，如果没有报错，则说明正常，例如最下面显示的是以下的命令：
 
     > node ./bin/www
     
-5、 如果启动成功，按ctrl+C终止node进程，然后将百度盘里面，文件名为【资源文件.7z】解压缩到根目录，覆盖根目录下的同名文件（一个覆盖一个不用覆盖）；
-
-6、 重新运行 ```npm start```命令，打开url：http://127.0.0.1:3000/test.html 然后查看console的结果。
+4、 打开url：http://127.0.0.1:3000/test.html 然后查看console的结果，如果能够显示结果，说明运行正常。
 
 [jQuery的ajax的API](http://www.jquery123.com/jQuery.ajax/)
 
