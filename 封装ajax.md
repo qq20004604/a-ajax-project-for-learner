@@ -52,7 +52,7 @@
 
 以下是一个最简单的ajax处理流程图，以帮助理解：
 
-<image src='./ajax-flow-pic.png'/>
+<image src='https://raw.githubusercontent.com/qq20004604/a-ajax-project-for-learner/master/ajax-flow-pic.png'/>
 
 
 ###<span style='color:red'>4、实际写一次ajax</span>
@@ -450,4 +450,7 @@ return obj;
 
 3、对请求头缺少自定义设置功能；
 
-以下是全部的源代码：
+以下是代码的github链接：
+
+https://github.com/qq20004604/a-ajax-project-for-learner
+
