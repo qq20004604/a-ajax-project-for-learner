@@ -454,3 +454,23 @@ return obj;
 
 https://github.com/qq20004604/a-ajax-project-for-learner
 
+封装了该方法的html文件是：
+
+https://github.com/qq20004604/a-ajax-project-for-learner/blob/master/public/XMLHttpRequest.html
+
+
+##**对下一步的计划**
+
+初级封装和中级高级封装的区别，我认为在于以下几点：
+
+1、更强的错误识别；
+2、更多的关于头部的设置，以及请求头、响应头的识别、设置和归类；
+3、简易方法的支持；
+4、跨域；
+5、以及其他；
+
+简单来说，就是让你的ajax更像jQuery封装好的ajax。
+
+当然，更全面的另一面就是，更笨重，更复杂。
+
+所以应该根据实际需要而写。
