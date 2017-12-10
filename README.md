@@ -57,3 +57,6 @@ server端返回值修改方法：
 
 启动server后查看http://127.0.0.1:3000/test.html
 
+访问非jQuery的异步请求库（我自己封装的），通过以下链接来访问测试案例：
+
+http://127.0.0.1:3000/XMLHttpRequest.html

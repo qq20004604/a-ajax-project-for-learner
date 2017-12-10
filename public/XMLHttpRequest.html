@@ -6,6 +6,7 @@
     <script src="./ajax.js"></script>
 </head>
 <body>
+<p>按F12查看console</p>
 <script>
     //测试代码
     $.ajax({
@@ -15,9 +16,42 @@
             a: 1
         }
     }).done(function (val) {
+        // 请求成功
+        console.log(" ");
+        console.log("get发送信息，返回值是对象");
         console.log(val)
     }).fail(function (err) {
+        // 请求失败
         console.log(err)
+    })
+
+    var obj = {
+        age: 100,
+        like: ["learning", "game"],
+        name: "wang dong",
+        testtest: 123
+    };
+
+    //普通post请求
+    $.ajax({
+        url: "/postForLearnResByString",
+        type: "post",
+        data: obj  // 会默认将对象转为JSON字符串
+    }).done(function (result) {
+        console.log(" ");
+        console.log("post发送信息，返回值是字符串");
+        console.log(result);
+    })
+
+    //post请求，返回的是对象
+    $.ajax({
+        url: "/postForLearnResByObject",
+        type: "post",
+        data: obj  // 会默认将对象转为JSON字符串
+    }).done(function (result) {
+        console.log(" ");
+        console.log("post发送信息，返回值是对象，返回值是发送信息对象中，key的长度小于5的项");
+        console.log(result);
     })
 </script>
 </body>
